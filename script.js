@@ -7,7 +7,7 @@
 // ------------------------------
 const catalog = new Map();
 
-// PS5
+/// PS5
 catalog.set("PS5", {
   hardware: [
     {
@@ -15,6 +15,12 @@ catalog.set("PS5", {
       genre: "Hardware",
       price: 499,
       img: "https://http2.mlstatic.com/D_NQ_NP_955000-MLU75239551715_032024-O.webp"
+    },
+    {
+      title: "Playstation VR 2",
+      genre: "Hardware",
+      price: 399,
+      img: "https://m.media-amazon.com/images/I/617KjYvMgHL._AC_UF894,1000_QL80_.jpg"
     },
     {
       title: "DualSense Wireless Controller",
@@ -29,6 +35,48 @@ catalog.set("PS5", {
       genre: "RPG",
       price: 59,
       img: "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg"
+    },
+    {
+  title: "Lies of P",
+  genre: "Games",
+  price: 69,
+  img: "https://image.api.playstation.com/vulcan/ap/rnd/202305/2308/06b354c8015b3c71e54f43aa883aab4641285d4a91734681.png"
+},
+{
+  title: "GTA 5",
+  genre: "Games",
+  price: 20,
+  img: "https://panamericana.vtexassets.com/arquivos/ids/435966/juego-grand-theft-auto-v-ps5-710425578687.jpg?v=637859699378630000"
+},
+{
+  title: "Clair Obscur Expedition 33",
+  genre: "Games",
+  price: 59,
+  img: "https://image.api.playstation.com/vulcan/ap/rnd/202501/2217/e5833a53529ff9879e87689f1e8b04d45ba7e6c97fa791e2.png"
+},
+{
+  title: "Silent Hill F",
+  genre: "Games",
+  price: 69,
+  img: "https://cdn2.unrealengine.com/silent-hill-f-key-7680x4320-1e56929c5932.jpeg"
+},
+{
+  title: "Silent Hill 2",
+  genre: "Game",
+  price: 69,
+  img: "https://image.api.playstation.com/vulcan/ap/rnd/202210/2000/IgwsFz9BiBrFvyV7pIWpoVgd.png"
+},
+{
+  title: "warhammer 40 K space marine 2",
+  genre: "Game",
+  price: 69,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVSKz3f00B5YUownqWQ1vtvfvwSVNijW9mqQ&s"
+},
+    {
+      title: "Tainted Grail",
+      genre: "Game",
+      price: 69,
+      img: "https://image.api.playstation.com/vulcan/ap/rnd/202503/1415/dc5eb159097d38843bc0b2daac641160c58b06b633ae5a71.png?w=1024&thumb=false"
     },
     {
       title: "Resident Evil 4 Remake",
@@ -51,6 +99,7 @@ catalog.set("PS5", {
   ]
 });
 
+
 // Xbox
 catalog.set("Xbox Series X|S", {
   hardware: [
@@ -67,6 +116,7 @@ catalog.set("Xbox Series X|S", {
       img: "https://assets.xboxservices.com/assets/1d/e9/1de988c2-f32f-4434-a541-f9a4b353ee78.jpg?n=Accessories-Hub_Content-Placement-0_2020-Controller-White_788x444.jpg"
     }
   ],
+
   games: [
     {
       title: "Avowed",
