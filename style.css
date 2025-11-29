@@ -46,26 +46,35 @@ main{max-width:1150px;margin:0 auto;padding:24px}
 
 /* Platform-specific Add buttons */
 body.ps5-bg .add{
-  background:linear-gradient(90deg,#285dff,#ff5ccf);
-  box-shadow:0 0 10px rgba(40,93,255,.4), 0 0 20px rgba(255,92,207,.3);
-  color:white;
-}
-body.xbox-bg .add{
-  background:linear-gradient(90deg,#00ff95,#00c86b);
-  box-shadow:0 0 12px rgba(0,255,149,.5), 0 0 25px rgba(0,200,107,.4);
-  color:black;
-}
-body.switch-bg .add{
-  background:linear-gradient(90deg,#e60012,#0ab9e6);
-  box-shadow:0 0 12px rgba(230,0,18,.5), 0 0 25px rgba(10,185,230,.4);
-  color:white;
-}
-body.pc-bg .add{
-  background:linear-gradient(90deg,#00e5ff,#ff4db8);
-  box-shadow:0 0 12px rgba(0,229,255,.5), 0 0 25px rgba(255,77,184,.4);
-  color:black;
+  background: linear-gradient(90deg,#285dff,#ff5ccf);
+  box-shadow: 0 0 10px rgba(40,93,255,.4), 0 0 20px rgba(255,92,207,.3);
+  color: white;
 }
 
+body.xbox-bg .add{
+  background: linear-gradient(90deg,#00ff95,#00c86b);
+  box-shadow: 0 0 12px rgba(0,255,149,.5), 0 0 25px rgba(0,200,107,.4);
+  color: black;
+}
+
+body.switch-bg .add{
+  background: linear-gradient(90deg,#e60012,#0ab9e6);
+  box-shadow: 0 0 12px rgba(230,0,18,.5), 0 0 25px rgba(10,185,230,.4);
+  color: white;
+}
+
+body.pc-bg .add{
+  background: linear-gradient(90deg,#00e5ff,#ff4db8);
+  box-shadow: 0 0 12px rgba(0,229,255,.5), 0 0 25px rgba(255,77,184,.4);
+  color: black;
+}
+
+/* New: Switch 2 */
+body.switch2-bg .add{
+  background: linear-gradient(90deg,#ff3c00,#00d4ff);
+  box-shadow: 0 0 12px rgba(255,60,0,.5), 0 0 25px rgba(0,212,255,.4);
+  color: white;
+}
 /* Filters & bar */
 .bar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
 .chip{background:#0f1426;color:var(--text);border:1px solid #253255;padding:8px 12px;border-radius:999px;cursor:pointer;transition:transform .05s ease}
@@ -141,7 +150,6 @@ select,input{background:#0c1122;color:var(--text);border:1px solid #263046;paddi
   text-shadow:0 0 6px #fff, 0 0 16px var(--cyan), 0 0 28px var(--pink);
 }
 .vice-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-
 /* =========================================
    PLATFORM BACKGROUNDS — Iconic looks
    ========================================= */
@@ -195,4 +203,17 @@ body.pc-bg::before {
   transform: perspective(520px) rotateX(62deg);
   transform-origin: bottom;
   opacity:.35;
+}
+
+/* --- Switch 2: Futuristic orange ↔ cyan glow --- */
+body.switch2-bg {
+  background: linear-gradient(135deg, #ff3c00 50%, #00d4ff 50%);
+  background-attachment: fixed;
+}
+body.switch2-bg::after {
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  box-shadow:
+    inset 0 0 0 6px rgba(255,60,0,.45),
+    inset 0 0 0 12px rgba(0,212,255,.45),
+    inset 0 0 120px 40px rgba(0,212,255,.25);
 }

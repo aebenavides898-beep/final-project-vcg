@@ -162,7 +162,93 @@ catalog.set("Switch", {
       genre: "Adventure",
       price: 69,
       img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/b37fec09f82c44c9bc3d8627b932557f_1024"
+    },
+    {
+      title: "Donkey Kong Country Tropical Freeze",
+      genre: "platformer",
+      price: 74,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch/70010000001339/d01cba67eb98fec32ac98027c07fa8d92dd52773565bfadc69f817c860e34b8a"
+    },
+    {
+      title: "The Legend Of Zelda Breath of the Wild",
+      genre: "Adventure",
+      price: 59,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58"
+    },
+    {
+      title: "Animal Crossing New Horizons",
+      genre: "Siumlation",
+      price: 59,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a"
+    },
+    {
+      title: "Mario Kart 8 Deluxe",
+      genre: "Racing",
+      price: 59,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453"
+    },
+    {
+      title: "Super Smash Bros Ultimate",
+     genre: "Fighting",
+     price: 74,
+     img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9" 
+    },
+    {
+      title: "Splatoon 3",
+      genre: "Shooter",
+      price: 79,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch/70010000046395/4555efa9f2061f7d1e1646ab3d3af790a7491270b1b3e32e730273e9ac096827"
+    },
+  ]
+});
+
+// Switch 2
+catalog.set("Nintendo Switch 2", {
+  hardware: [
+    {
+      title: "Nintendo Switch 2",
+      genre: "Hardware",
+      price: 449,
+      img: "https://http2.mlstatic.com/D_NQ_NP_758871-MLA96097438383_102025-O.webp"
+    },
+    {
+      title: "Nintendo Switch Pro Controller 2",
+      genre: "Hardware",
+      price: 89,
+      img: "https://preview.redd.it/switch-2-pro-controller-concept-v0-6hmej5sf6tce1.png?auto=webp&s=07fabd3c14ccd1a83620e90d1f665a0adba39954"
     }
+  ],
+  games: [
+    {
+      title: "Mario Kart world Tour",
+      genre: "Racing",
+      price: 109,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch2/70010000095431/b664445df3f7a3765a760822d725ea1853bc6f43d2aa96ccee81d6f45cb281ef"
+    },
+    {
+      title: "Donkey Kong Bananza",
+      genre: "Adventure",
+      price: 96,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch2/70010000096809/5420893af8eee86d1e49bbf5ed445b991053e6650c28024bc9bb98333d31624c"
+    },
+    {
+      title: "CyberPunk 2077 Definite Edition",
+      genre: "RPG",
+      Price: 79,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch2/70010000095547/f172668ac499434b33917199f2021f753d42b73862d76d3c93d04a474dade847"
+    },
+    {
+      title: "Kirby Air Riders",
+      title: "Adventure",
+      price: 89,
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch2/70010000103775/61c47511e5fc392c271d6f4736fa0575e2aed19c30e6fe73b50906cadb9b2996"
+    },
+    {
+    title: "Hyrule Warriors: Age of Imprisonment",
+    genre: "Action",
+    price: 96,
+    img: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_930/b_white/f_auto/q_auto/store/software/switch2/70010000103459/463c88b9defa517be9227d851857d27926c9e2ffe18337790d47a948a3af1ef5"
+    } 
   ]
 });
 
@@ -221,6 +307,7 @@ function setBodyBg(platform){
   if(platform === "Xbox Series X|S"){ b.classList.add("xbox-bg"); }
   if(platform === "Switch"){ b.classList.add("switch-bg"); }
   if(platform === "PC"){ b.classList.add("pc-bg"); }
+  if(platform === "Nintendo Switch 2"){ b.classList.add("switch2-bg"); }
 }
 
 // Build the console chips under "Choose your platform"
