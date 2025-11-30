@@ -1,29 +1,69 @@
----
+📘 Changelog — Vice City Games
 
+⸻
 
-# Changelog — Vice City Games
+v1.0 — 2025-09-29
 
-## v1.0 — 2025-09-29  
-Initial Release — Project Kickoff  
+Lanzamiento Inicial — Inicio del Proyecto
+	•	Andrés (Diseño UX) — Diseñó la estética general del sitio (Miami Vice / neón), definió la estructura de la página principal y los tabs de consolas.
+	•	Juanjo (Frontend Developer) — Construyó la estructura HTML básica y el sistema de navegación (Home, Shop, Cart).
+	•	Nico (JavaScript Engineer) — Implementó el catálogo inicial usando Maps, tabs de consola, filtros y lógica del carrito.
+	•	Johan (QA / Tester) — Probó navegación del catálogo, carrito y ayudó a depurar problemas de imágenes.
 
-- Andrés (UX Designer) — Designed the site’s overall look and feel, picked the Miami Vice / neon aesthetic, and set the structure for the homepage and console tabs.  
-- Juanjo (Frontend Developer) — Built the basic HTML structure and navigation system (Home, Shop, Cart).  
-- Nico (JavaScript Engineer) — Implemented the catalog using Maps, added console tabs, filters, and shopping cart logic.  
-- Johan (QA / Tester) — Tested catalog navigation, cart functionality, and helped debug issues with image loading.  
+⸻
 
----
+v1.1 — 2025-09-30
 
-## v1.1 — 2025-09-30  
-First Major Update  
+Primera Actualización Grande
+	•	Andrés (Diseño UX) — Mejoró el diseño visual de los tabs de plataforma (PS5 azul/rosa, Xbox verde, Switch rojo/cyan, PC).
+	•	Juanjo (Frontend Developer) — Pulió tarjetas, layout y mejoró la barra de búsqueda.
+	•	Nico (JavaScript Engineer) — Añadió el chatbot ViceBot con funciones básicas.
+	•	Johan (QA / Tester) — Detectó issues de UI en Xbox y verificó botones de compra por plataforma.
 
-- Andrés (UX Designer) — Improved visual design for platform tabs (PS5 blue/pink, Xbox green, Switch red/cyan, PC grid).  
-- Juanjo (Frontend Developer) — Styled and polished cards and layout; worked on search bar integration.  
-- Nico (JavaScript Engineer) — Added chatbot assistant to guide users with filters, navigation, and cart management.  
-- Johan (QA / Tester) — Identified UI/UX issues with Xbox “foggy filter” and verified the Add-to-Cart buttons per platform worked after fixes.  
+⸻
 
----
+v1.2 — 2025-11-29
 
-## Planned Next Steps  
-- Add a custom Florida-style homepage (beach, palm trees, neon sunset).  
-- Polish chatbot responses with more personality.  
-- Create a repo banner for GitHub (Miami Vice inspired).
+Actualización de Catálogo — Trabajo de Juanjo
+	•	Juanjo (Frontend Developer) —
+	•	Actualizó el catálogo completo: precios, géneros y plataformas.
+	•	Añadió nuevas imágenes, verificó rutas y duplicó elementos necesarios en la carpeta /img.
+	•	Ajustó tarjetas que no cargaban por rutas incorrectas.
+	•	Validó el funcionamiento de los filtros con los nuevos productos.
+	•	Johan (QA / Tester) —
+	•	Reportó errores con rutas, imágenes faltantes y botones que no cargaban correctamente.
+
+⸻
+
+v1.3 — 2025-11-30
+
+Mega Actualización Visual + Funcional — Trabajo de Andrés
+
+✔ Mejoras Visuales
+	•	Eliminación de:
+	•	Símbolos flotantes de PlayStation.
+	•	Partículas/Orbs animadas.
+	•	Vignette y overlays que teñían la pantalla de morado.
+	•	Restauración completa del fondo img/bg.jpg sin filtros raros ni distorsiones.
+	•	Reposición de la barra de búsqueda a su posición original, centrada y fija.
+	•	Eliminación del ticker duplicado dentro del Home (ahora solo hay uno debajo del header).
+	•	Corrección total de rutas para imágenes (img/vicebot.png, img/bg.jpg).
+
+✔ Mejoras Funcionales
+	•	Implementación de carrito persistente con localStorage (no se pierde al recargar).
+	•	Sistema de Winter Sale:
+	•	50% OFF en videojuegos.
+	•	25% OFF en consolas.
+	•	Nuevo resumen del carrito con:
+	•	Total original, total con descuento, ahorro total.
+	•	Puntos acumulados (10 puntos por cada $100).
+	•	Nota para canjear 50 puntos por 20% OFF adicional.
+	•	Sistema de ordenamiento por precio y alfabético.
+	•	Sistema de stock:
+	•	Cada producto muestra unidades disponibles.
+	•	Botón “Añadir al carrito” se desactiva cuando no hay stock.
+	•	Estado “Agotado” visible.
+
+✔ Chatbot ViceBot Mejorado
+	•	Respuestas sobre oferta, puntos, plataforma, navegación y filtros.
+	•	Limpieza del header y avatar reparado tras corregir rutas.
