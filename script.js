@@ -396,35 +396,39 @@ function renderCatalog(items){
   currentItems = items.slice();
 
   items.forEach((it, idx) => {
-    const card = document.createElement("div");
-    card.className = "card";
+  const card = document.createElement("div");
+  card.className = "card game-card"; // Añadimos clase extra para estilos navideños
 
-    const priceToShow = computeSalePrice(it);
-    const isDiscounted = isWinterSaleActive() && priceToShow < it.price;
+  const priceToShow = computeSalePrice(it);
+  const isDiscounted = isWinterSaleActive() && priceToShow < it.price;
 
-    card.innerHTML = `
-      <img class="thumb" src="${it.img}" alt="${it.title}"
-           onerror="this.onerror=null;this.src='https://placehold.co/640x360?text=Image+not+available'">
-      <div class="meta">
-        <div class="title">${it.title}</div>
-        <div class="muted">${it.platform} • ${it.type}${it.genre && it.genre!=="Hardware" ? " • "+it.genre : ""}</div>
-        <div class="price">
-          ${
-            isDiscounted
-              ? `<span style="text-decoration:line-through;opacity:.7;margin-right:6px;">$${money(it.price)}</span>
-                 <span>$${money(priceToShow)}</span>`
-              : `$${money(priceToShow)}`
-          }
-        </div>
-        ${isDiscounted ? `<div class="pill">🎄 Winter Sale!</div>` : ""}
-        <button class="btn add addBtn"
-          data-platform="${it.platform}"
-          data-index="${idx}"
-        >Add to Cart</button>
+ card.innerHTML = `
+  <img class="hat" src="img/santa-hat.png" alt="Gorro navideño">
+  <div class="hat-wrapper">
+    <img class="thumb" src="${it.img}" alt="${it.title}"
+         onerror="this.onerror=null;this.src='https://placehold.co/640x360?text=Image+not+available'">
+  </div>
+  <div class="meta">
+    <div class="title">${it.title}</div>
+    <div class="muted">${it.platform} • ${it.type}${it.genre && it.genre !== "Hardware" ? " • " + it.genre : ""}</div>
+    <div class="price">
+      ${
+        isDiscounted
+          ? `<span style="text-decoration:line-through;opacity:.7;margin-right:6px;">$${money(it.price)}</span>
+             <span>$${money(priceToShow)}</span>`
+          : `$${money(priceToShow)}`
+
+        }
       </div>
-    `;
-    grid.appendChild(card);
-  });
+      ${isDiscounted ? `<div class="pill">🎄 Winter Sale!</div>` : ""}
+      <button class="btn add addBtn"
+        data-platform="${it.platform}"
+        data-index="${idx}"
+      >Add to Cart</button>
+    </div>
+  `;
+  grid.appendChild(card);
+});
 }
 
 // ---------- renderGames wrapper for ViceBot + search ----------
@@ -1190,3 +1194,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Little welcome message
   addMessage("Hey babe, I’m ViceBot 💾 Ask me about games, prices, genres, consoles, or how to use the store 🌴 I can even add games to your cart for you.", "bot");
 })();
+// --- EFECTO DE NIEVE NAVIDEÑA --- //
+function createSnowflakes() {
+  for (let i = 0; i < 30; i++) {
+    let snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.textContent = "❄";
+    snowflake.style.left = Math.random() * window.innerWidth + "px";
+    snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(snowflake);
+  }
+}
+
+// Llamar la función cuando cargue la página
+window.onload = function() {
+  createSnowflakes();
+};
+window.addEventListener("click", () => {
+  const bgMusic = document.getElementById("bgMusic");
+  bgMusic.volume = 0.3; // ajusta el volumen entre 0.0 y 1.0
+  bgMusic.play();
+}, { once: true });
+window.addEventListener("click", () => {
+  const bgMusic = document.getElementById("bgMusic");
+  bgMusic.volume = 0.3; // volumen entre 0.0 y 1.0
+  bgMusic.play();
+}, { once: true });

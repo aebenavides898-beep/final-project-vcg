@@ -1,4 +1,25 @@
 /* =============== THEME VARIABLES =============== */
+/* Fondo navideño con nieve */
+body {
+  background: linear-gradient(to bottom, #0f0f3d, #1a1a40);
+  color: #fff;
+  font-family: 'Verdana', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Copos de nieve */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1.2em;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
 :root{
   --bg:#0a0a0f; 
   --panel:#10121a; 
@@ -769,4 +790,46 @@ header .search {
   width: 60% !important;
   max-width: 430px !important;
   margin: 0 auto !important;
+}
+/* --- ESTILOS NAVIDEÑOS --- */
+
+/* Tarjeta con gorrito */
+.card.game-card {
+  position: relative;
+  display: inline-block;
+  margin: 1em;
+  padding-top: 50px; /* espacio para que el gorro no se corte */
+}
+
+/* Imagen del juego */
+.thumb {
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* 🎅 Gorro navideño flotando en la esquina de la tarjeta */
+.hat {
+  position: absolute;
+  top: -35px;       /* más arriba para sobresalir */
+  left: -25px;      /* más a la izquierda */
+  width: 90px;      /* más grande */
+  transform: rotate(-20deg);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Nieve cayendo */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1.2em;
+  animation: fall linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
 }
