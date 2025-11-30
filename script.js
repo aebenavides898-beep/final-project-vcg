@@ -198,7 +198,7 @@ catalog.set("Switch", {
   ]
 });
 
-// Switch 2 // test
+// Switch 2
 catalog.set("Nintendo Switch 2", {
   hardware: [
     {
