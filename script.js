@@ -130,7 +130,7 @@ catalog.set("Xbox Series X|S", {
     {
       title: "Halo Infinite",
       genre: "Shooter",
-      price: 68, 
+      price: 68,
       img: "https://store-images.s-microsoft.com/image/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6?q=90&w=177&h=265"
     },
     {
@@ -458,39 +458,38 @@ function renderCatalog(items){
   currentItems = items.slice();
 
   items.forEach((it, idx) => {
-  const card = document.createElement("div");
-  card.className = "card game-card"; // Añadimos clase extra para estilos navideños
+    const card = document.createElement("div");
+    card.className = "card game-card"; // Añadimos clase extra para estilos navideños
 
-  const priceToShow = computeSalePrice(it);
-  const isDiscounted = isWinterSaleActive() && priceToShow < it.price;
+    const priceToShow = computeSalePrice(it);
+    const isDiscounted = isWinterSaleActive() && priceToShow < it.price;
 
- card.innerHTML = `
-  <img class="hat" src="img/santa-hat.png" alt="Gorro navideño">
-  <div class="hat-wrapper">
-    <img class="thumb" src="${it.img}" alt="${it.title}"
-         onerror="this.onerror=null;this.src='https://placehold.co/640x360?text=Image+not+available'">
-  </div>
-  <div class="meta">
-    <div class="title">${it.title}</div>
-    <div class="muted">${it.platform} • ${it.type}${it.genre && it.genre !== "Hardware" ? " • " + it.genre : ""}</div>
-    <div class="price">
-      ${
-        isDiscounted
-          ? `<span style="text-decoration:line-through;opacity:.7;margin-right:6px;">$${money(it.price)}</span>
-             <span>$${money(priceToShow)}</span>`
-          : `$${money(priceToShow)}`
-
-        }
+    card.innerHTML = `
+      <img class="hat" src="img/santa-hat.png" alt="Gorro navideño">
+      <div class="hat-wrapper">
+        <img class="thumb" src="${it.img}" alt="${it.title}"
+             onerror="this.onerror=null;this.src='https://placehold.co/640x360?text=Image+not+available'">
       </div>
-      ${isDiscounted ? `<div class="pill">🎄 Winter Sale!</div>` : ""}
-      <button class="btn add addBtn"
-        data-platform="${it.platform}"
-        data-index="${idx}"
-      >Add to Cart</button>
-    </div>
-  `;
-  grid.appendChild(card);
-});
+      <div class="meta">
+        <div class="title">${it.title}</div>
+        <div class="muted">${it.platform} • ${it.type}${it.genre && it.genre !== "Hardware" ? " • " + it.genre : ""}</div>
+        <div class="price">
+          ${
+            isDiscounted
+              ? `<span style="text-decoration:line-through;opacity:.7;margin-right:6px;">$${money(it.price)}</span>
+                 <span>$${money(priceToShow)}</span>`
+              : `$${money(priceToShow)}`
+          }
+        </div>
+        ${isDiscounted ? `<div class="pill">🎄 Winter Sale!</div>` : ""}
+        <button class="btn add addBtn"
+          data-platform="${it.platform}"
+          data-index="${idx}"
+        >Add to Cart</button>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
 }
 
 // ---------- renderGames wrapper for ViceBot + search ----------
@@ -1035,7 +1034,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function filterByQuestion(text) {
     const lower = text.toLowerCase();
     const platforms = detectPlatforms(lower);
-    const genres    = detectGenres(lower);
+       const genres    = detectGenres(lower);
 
     let pool = window.games.slice();
 
@@ -1084,7 +1083,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ====== MAIN BRAIN: answerQuestion ======
   function answerQuestion(q) {
-    const text = q.toLowerCase();
+    const text = q.toLowerCase().trim();
+
+    // --- NEW: short platform commands ---
+    if (text === "ps5") {
+      selectPlatform("PS5");
+      return "Opening the PS5 store tab for you.";
+    }
+
+    if (text === "xbox" || text === "xbox series x" || text === "xbox series x|s") {
+      selectPlatform("Xbox Series X|S");
+      return "Showing you the Xbox Series X|S section.";
+    }
+
+    if (text === "switch") {
+      selectPlatform("Switch");
+      return "Taking you to the Nintendo Switch section.";
+    }
+
+    if (text === "switch 2" || text === "nintendo switch 2") {
+      selectPlatform("Nintendo Switch 2");
+      return "Opening the Nintendo Switch 2 section.";
+    }
+
+    if (text === "pc") {
+      selectPlatform("PC");
+      return "Opening the PC catalog for you.";
+    }
 
     // 0) Direct "add X to cart" intent
     const namedGame = tryAddNamedGameToCart(text);
@@ -1256,6 +1281,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Little welcome message
   addMessage("Hey babe, I’m ViceBot 💾 Ask me about games, prices, genres, consoles, or how to use the store 🌴 I can even add games to your cart for you.", "bot");
 })();
+
 // --- EFECTO DE NIEVE NAVIDEÑA --- //
 function createSnowflakes() {
   for (let i = 0; i < 30; i++) {
