@@ -1,6 +1,6 @@
-README.md (Final Version Linking to Changelog)
+README.md 
 
-You can copy–paste this entire thing as your README.
+
 
 ⸻
 
