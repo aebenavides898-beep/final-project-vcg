@@ -97,7 +97,7 @@ catalog.set("PS5", {
   ]
 });
 
-// Xbox
+// Xbox Series
 catalog.set("Xbox Series X|S", {
   hardware: [
     {
@@ -126,7 +126,38 @@ catalog.set("Xbox Series X|S", {
       genre: "Racing",
       price: 59,
       img: "https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg"
+    },
+    {
+      title: "Halo Infinite",
+      genre: "Shooter",
+      price: 68, 
+      img: "https://store-images.s-microsoft.com/image/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6?q=90&w=177&h=265"
+    },
+    {
+      title: "GTA 5",
+      genre: "Action,Adventure",
+      price: 42,
+      img: "https://store-images.s-microsoft.com/image/apps.25111.14171925115759792.46ff70c5-7760-41a8-9ced-d2de5ae78f17.a595ad6c-5ee2-4d5f-96ed-96c2c62c46e0?q=90&w=177&h=265"
+    },
+    {
+      title: "Stray",
+      genre: "Adventure",
+      price: 50,
+      img: "https://store-images.s-microsoft.com/image/apps.15876.13754210357812593.c3c8aa7a-e063-438f-8dc1-02c5d4abfd95.13c1afe0-c06d-46d6-bfdc-6009527cbaff?q=90&w=177&h=265"
+    },
+    {
+      title: "Injustice 2",
+      genre: "Action",
+      price: 50,
+      img: "https://store-images.s-microsoft.com/image/apps.51626.14224988712834177.85c26f3e-22b2-4c24-8795-5543bdc17faf.4104b935-1cde-4ea7-a04a-f89e8c253a9a?q=90&w=177&h=265"
+    },
+    {
+      title: "Minecraft",
+      genre:"Action,Adventure",
+      price: 35,
+      img: "https://store-images.s-microsoft.com/image/apps.53095.13850085746326678.06e2dc5c-7997-46e9-a8e6-0e48b57cb13b.419e3c9d-9dd3-4a28-a9f3-a12350215871?q=90&w=177&h=265"
     }
+
   ]
 });
 
@@ -276,7 +307,38 @@ catalog.set("PC", {
       genre: "RPG",
       price: 59,
       img: "https://cdn.akamai.steamstatic.com/steam/apps/1086940/header.jpg"
+    },
+    {
+      title: "Escape The Backrooms",
+      genre: "Adventure",
+      price: 5,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_Lc0j-J4R1pSHalg94tv8T67A5WAIlBPQcIxhpsyf2S6rdfMN8xEviiaJHPBQggepFK_eJLcaYS3AAlOxB6QWHgJnUKDjgMATfkPRT4x8g&s=10"
+    },
+    {
+      title: "Euro Truck Simulator 2",
+      genre: "Simulation",
+      price: 13,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmqUukCjt9IQEMQ_UlK2mp3i3jq9hz52d3aV_81wqOk6_aDownEuRLqTa-dNFyfn-2o3VBO4Kt0-OPvLVSG8_u0OqEF2zUQMRxjvjzMPgSgA&s=10"
+    },
+    {
+      title: "Dragon Ball: Sparking Zero",
+      genre: "Action",
+      price: 56,
+      img: "https://image.api.playstation.com/vulcan/ap/rnd/202405/2306/9c2d5058e4517a674ceb9afa25aab9bcc7691e5a725dfe47.jpg"
+    },
+    {
+      title: "Escape From Tarkov",
+      genre: "Extraction Shooter",
+      price: 21,
+      img: "https://www.escapefromtarkov.com/themes/eft-site/images/main_image.jpg"
+    },
+    {
+      title: "Batman Arkham Knight",
+      genre: "Action",
+      price: 17,
+      img: "https://image.api.playstation.com/gs2-sec/acpkgo/prod/CUSA00133_00/374/i_21516ca32977519346e7b5cbf52fcadf722998b0d0a781fbeeea687cd3dca173/i/icon0.png"
     }
+
   ]
 });
 
