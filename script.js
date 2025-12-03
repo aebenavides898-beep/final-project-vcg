@@ -1034,7 +1034,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function filterByQuestion(text) {
     const lower = text.toLowerCase();
     const platforms = detectPlatforms(lower);
-       const genres    = detectGenres(lower);
+    const genres    = detectGenres(lower);
 
     let pool = window.games.slice();
 
@@ -1294,17 +1294,29 @@ function createSnowflakes() {
   }
 }
 
-// Llamar la función cuando cargue la página
-window.onload = function() {
-  createSnowflakes();
-};
-window.addEventListener("click", () => {
+// Nieve al cargar la página
+window.addEventListener("load", createSnowflakes);
+
+// 🎵 Inicializar música de fondo en el primer click
+function initBgMusic() {
   const bgMusic = document.getElementById("bgMusic");
-  bgMusic.volume = 0.3; // ajusta el volumen entre 0.0 y 1.0
-  bgMusic.play();
-}, { once: true });
-window.addEventListener("click", () => {
-  const bgMusic = document.getElementById("bgMusic");
-  bgMusic.volume = 0.3; // volumen entre 0.0 y 1.0
-  bgMusic.play();
-}, { once: true });
+  if (!bgMusic) {
+    console.warn("bgMusic element not found");
+    return;
+  }
+
+  const handler = () => {
+    bgMusic.volume = 0.3;
+    bgMusic.play().catch((err) => {
+      console.warn("Could not play bg music:", err);
+    });
+    // Solo una vez
+    window.removeEventListener("click", handler);
+  };
+
+  // Se activa solo en el primer click del usuario
+  window.addEventListener("click", handler);
+}
+
+// Esperar a que el DOM exista antes de buscar el audio
+window.addEventListener("DOMContentLoaded", initBgMusic);
